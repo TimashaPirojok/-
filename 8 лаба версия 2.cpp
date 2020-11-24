@@ -23,22 +23,7 @@ int main()
 			printf("\nНедостаточно свободной памяти \n");
 			s = NULL;
 		}
-	} while (!s);
-	printf("Вводите текст - ");
-	rewind(stdin);
-	gets_s(s, size1);
-	system("CLS");
-	if (*s == '\0')
-	{
-		printf("вы ничего не ввели");
-		return 0;
-	}
-	printf("Ваш текст:\n");
-	puts(s);
-	char** slova = NULL;
-	slova = (char**)calloc(size2, sizeof(char*));
-	for (i = 0; i < size1; i++)
-	{
+	
 		if (*(s + i) >= 'A' && *(s + i) <= 'z' || *(s + i) >= 'А' && *(s + i) <= 'я' )
 		{
 			pos1 = i;
@@ -164,21 +149,4 @@ int main()
 	}*/
 /*for (j = 0; j < num; j++)
 	{
-		for (i = j + 1; i < num; i++)
-		{
-			if (slova[j] == slova[i])
-			{
-				sum++;
-				num--;
-				for (k = i; k < num; k++)
-				{
-					*slova[k] = *slova[k + 1];
-				}
-				slova = (char**)realloc(slova, num * sizeof(char*));
-				m = (int *)realloc(m, num * sizeof(int));
-				m[j] = sum;
-				i--;
-			}
-		}
-		sum = 1;
-	}*/
+		for (i = j + 1; i < num; i+
